@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Morphing Hamburger Menu</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div class="container">
+    <!-- This checkbox will give us the toggle behavior, it will be hidden, but functional -->
+    <input id="toggle" type="checkbox">
+
+    <!-- IMPORTANT: Any element that we want to modify when the checkbox state changes go here, being "sibling" of the checkbox element -->
+
+    <!-- This label is tied to the checkbox, and it will contain the toggle "buttons" -->
+    <label class="toggle-container" for="toggle">
+        <!-- If menu is open, it will be the "X" icon, otherwise just a clickable area behind the hamburger menu icon -->
+        <span class="button button-toggle"></span>
+    </label>
+
+    <!-- The nav menu -->
+    <nav class="nav">
+        <a class="nav-item" href="">Dashboard</a>
+        <a class="nav-item" href="">History</a>
+        <a class="nav-item" href="">Statistics</a>
+        <a class="nav-item" href="">Settings</a>
+    </nav>
+
+    <!-- Just dummy content like in the animated gif -->
+    <section class="dummy-content">
+        <div class="circle"></div>
+        <div class="text">
+            <span></span><span></span>
+        </div>
+        <div class="square-top"></div>
+        <div class="square-behind"></div>
+    </section>
+</div>
+
+</body>
+</html>
