@@ -4,6 +4,6 @@ A CSS only Morphing Hamburger Menu, based on a [dribbble shot](https://dribbble.
 
 [**DEMO**](http://lmgonzalves.github.io/morphing-hamburger-menu/)
 
-**TUTORIAL** (coming soon)
+[**TUTORIAL**](https://scotch.io/tutorials/building-a-morphing-hamburger-menu-with-css)
 
 [**CODEPEN**](http://codepen.io/lmgonzalves/pen/KaWaJO?editors=1100)
