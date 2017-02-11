@@ -27,11 +27,21 @@ a {
 
 /* Toggle functionality */
 #toggle {
-  display: none;
+  position: absolute;
+  left: -100%;
+  top: -100%;
+}
+
+#toggle:focus ~ .toggle-container .button-toggle {
+  box-shadow: 0 0 0 8px rgba(0, 0, 0, 0.1), inset 0 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
 #toggle:checked ~ .toggle-container .button-toggle {
   box-shadow: 0 0 0 550px rgba(0, 0, 0, 0.1), inset 0 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+#toggle:checked ~ .toggle-container .button-toggle:hover {
+  box-shadow: 0 0 0 550px rgba(0, 0, 0, 0.1), inset 0 0 0 20px rgba(0, 0, 0, 0.1), 0 0 0 8px rgba(0, 0, 0, 0.1), inset 0 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
 #toggle:checked ~ .toggle-container .button-toggle:before {
@@ -44,6 +54,10 @@ a {
   -webkit-transform: translateY(-50%) rotate(-45deg) scale(1);
       -ms-transform: translateY(-50%) rotate(-45deg) scale(1);
           transform: translateY(-50%) rotate(-45deg) scale(1);
+}
+
+#toggle:checked:focus ~ .toggle-container .button-toggle {
+  box-shadow: 0 0 0 550px rgba(0, 0, 0, 0.1), inset 0 0 0 20px rgba(0, 0, 0, 0.1), 0 0 0 8px rgba(0, 0, 0, 0.1), inset 0 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
 #toggle:checked ~ .nav {

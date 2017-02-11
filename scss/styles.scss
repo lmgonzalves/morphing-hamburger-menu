@@ -36,7 +36,16 @@ a {
 
 // To hide the checkbox
 #toggle {
-  display: none;
+  position: absolute;
+  left: -100%;
+  top: -100%;
+}
+
+#toggle:focus {
+
+  & ~ .toggle-container .button-toggle {
+    box-shadow: 0 0 0 8px rgba(0, 0, 0, 0.1), inset 0 0 0 20px rgba(0, 0, 0, 0.1);
+  }
 }
 
 // Styles for the 'open' state, if the checkbox is checked
@@ -47,6 +56,10 @@ a {
   & ~ .toggle-container .button-toggle {
     box-shadow: 0 0 0 550px rgba(0, 0, 0, 0.1), inset 0 0 0 20px rgba(0, 0, 0, 0.1);
 
+    &:hover {
+      box-shadow: 0 0 0 550px rgba(0, 0, 0, 0.1), inset 0 0 0 20px rgba(0, 0, 0, 0.1), 0 0 0 8px rgba(0, 0, 0, 0.1), inset 0 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+
     &:before {
       transform: translateY(-50%) rotate(45deg) scale(1);
     }
@@ -54,6 +67,10 @@ a {
     &:after {
       transform: translateY(-50%) rotate(-45deg) scale(1);
     }
+  }
+
+  &:focus ~ .toggle-container .button-toggle {
+    box-shadow: 0 0 0 550px rgba(0, 0, 0, 0.1), inset 0 0 0 20px rgba(0, 0, 0, 0.1), 0 0 0 8px rgba(0, 0, 0, 0.1), inset 0 0 0 20px rgba(0, 0, 0, 0.1);
   }
 
   // Open nav
